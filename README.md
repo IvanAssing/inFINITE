@@ -2,8 +2,7 @@
 <img src="resources/icons/infinite_v5.png" width="200">
 
 
-## **inFINITE Project - Finite Element Analysis Toolkit**
-## ***release 1.0***
+## **inFINITE Project - Finite Element Analysis Toolkit** ***(release 1.0)***
 
 ## Finite Elements For Linear Elastic Analysis 
 - Truss3D - Linear Spatial Truss Element
@@ -20,7 +19,7 @@
 - FT3D - Truss3D Native Format (Text)
 - FSXL - Solid3D Native Format (XML)
 - FP2D - Plane Stress Natine Format
-- FT2D - Frame 2D Native Format
+- FT2D - Frame Native Format
 
 
 ## Post Processing Features
@@ -51,7 +50,7 @@
 
 ![image11](resources/screenshots/Isosurface_2.png)
 
-![image23](resources/screenshots/Isosurface_2.png)
+![image23](resources/screenshots/Isosurface_3.png)
 
 - **Scalar Cutting Plane**
 
@@ -104,4 +103,3 @@ This project is licensed under the GPL License 3.0 - see the [LICENSE](LICENSE) 
 ## Authors
 #### Copyright (C) 2018 Ivan Assing da Silva
 #### Contact: ivanassing@gmail.com
-

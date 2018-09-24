@@ -48,7 +48,7 @@
 
 ![image10](resources/screenshots/Isosurface_1.png)
 
-![image11](resources/screenshots/Isosurface_2.png)
+![image11](resources/screenshots/Isosurface_4.png)
 
 ![image23](resources/screenshots/Isosurface_3.png)
 

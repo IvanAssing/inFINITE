@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionOpenFile"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="actionCloseModel"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionSolverCPU"/>
+    <addaction name="actionSolverGPU"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>&amp;Window</string>
+    </property>
+    <addaction name="actionTileSubWindows"/>
+    <addaction name="actionCascadeSubWindows"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionTopView"/>
+    <addaction name="actionBottomView"/>
+    <addaction name="actionRightView"/>
+    <addaction name="actionLeftView"/>
+    <addaction name="actionFrontView"/>
+    <addaction name="actionBackView"/>
+    <addaction name="actionIsometricView"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionOrthographicProjection"/>
+    <addaction name="actionPerpectiveProjection"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuWindow"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="fileToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenFile"/>
+   <addaction name="actionOpenDXFFile"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSaveAs"/>
+   <addaction name="separator"/>
+   <addaction name="actionScreenshoot"/>
+   <addaction name="actionSolverGPU"/>
+   <addaction name="actionSolverCPU"/>
+  </widget>
+  <widget class="QToolBar" name="viewToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionTopView"/>
+   <addaction name="actionBottomView"/>
+   <addaction name="actionLeftView"/>
+   <addaction name="actionRightView"/>
+   <addaction name="actionFrontView"/>
+   <addaction name="actionBackView"/>
+   <addaction name="actionIsometricView"/>
+   <addaction name="separator"/>
+   <addaction name="actionOrthographicProjection"/>
+   <addaction name="actionPerpectiveProjection"/>
+  </widget>
+  <action name="actionTopView">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/topview.ico</normaloff>:/icons/topview.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Top View</string>
+   </property>
+   <property name="toolTip">
+    <string>Top View</string>
+   </property>
+  </action>
+  <action name="actionBottomView">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/bottomview.ico</normaloff>:/icons/bottomview.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Bottom View</string>
+   </property>
+   <property name="toolTip">
+    <string>Bottom View</string>
+   </property>
+  </action>
+  <action name="actionRightView">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/rightview.ico</normaloff>:/icons/rightview.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Right View</string>
+   </property>
+   <property name="toolTip">
+    <string>Right View</string>
+   </property>
+  </action>
+  <action name="actionLeftView">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/leftview.ico</normaloff>:/icons/leftview.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Left View</string>
+   </property>
+   <property name="toolTip">
+    <string>Left View</string>
+   </property>
+  </action>
+  <action name="actionFrontView">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/frontview.ico</normaloff>:/icons/frontview.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Front View</string>
+   </property>
+   <property name="toolTip">
+    <string>Front View</string>
+   </property>
+  </action>
+  <action name="actionBackView">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/backview.ico</normaloff>:/icons/backview.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Back View</string>
+   </property>
+   <property name="toolTip">
+    <string>Back View</string>
+   </property>
+  </action>
+  <action name="actionIsometricView">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/isometric.png</normaloff>:/icons/isometric.png</iconset>
+   </property>
+   <property name="text">
+    <string>Isometric View</string>
+   </property>
+   <property name="toolTip">
+    <string>Isometric View</string>
+   </property>
+  </action>
+  <action name="actionOrthographicProjection">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/orthographic.ico</normaloff>:/icons/orthographic.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Orthographic Projection</string>
+   </property>
+   <property name="toolTip">
+    <string>Orthographic Projection</string>
+   </property>
+  </action>
+  <action name="actionPerpectiveProjection">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/perspective.ico</normaloff>:/icons/perspective.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Perpective Projection</string>
+   </property>
+   <property name="toolTip">
+    <string>Perpective Projection</string>
+   </property>
+  </action>
+  <action name="actionCascadeSubWindows">
+   <property name="text">
+    <string>Cascade Windows</string>
+   </property>
+   <property name="toolTip">
+    <string>Cascade Windows</string>
+   </property>
+  </action>
+  <action name="actionTileSubWindows">
+   <property name="text">
+    <string>Tile Windows</string>
+   </property>
+   <property name="toolTip">
+    <string>Tile Windows</string>
+   </property>
+  </action>
+  <action name="actionScreenshoot">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/snapshoot.ico</normaloff>:/icons/snapshoot.ico</iconset>
+   </property>
+   <property name="text">
+    <string>screenshot</string>
+   </property>
+   <property name="toolTip">
+    <string>screenshot</string>
+   </property>
+  </action>
+  <action name="actionOpenFile">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/open_file2.png</normaloff>:/icons/open_file2.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open File</string>
+   </property>
+   <property name="toolTip">
+    <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/save.ico</normaloff>:/icons/save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/saveas.ico</normaloff>:/icons/saveas.ico</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save As</string>
+   </property>
+   <property name="toolTip">
+    <string>Save File As</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F4</string>
+   </property>
+  </action>
+  <action name="actionCloseModel">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/close.png</normaloff>:/icons/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Close Model</string>
+   </property>
+   <property name="toolTip">
+    <string>Close current model</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
+  </action>
+  <action name="actionSolverGPU">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/solver_gpu.png</normaloff>:/icons/solver_gpu.png</iconset>
+   </property>
+   <property name="text">
+    <string>Solver GPU</string>
+   </property>
+   <property name="toolTip">
+    <string>iteractive solver on GPU</string>
+   </property>
+  </action>
+  <action name="actionSolverCPU">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/solver_cpu.png</normaloff>:/icons/solver_cpu.png</iconset>
+   </property>
+   <property name="text">
+    <string>Solver CPU</string>
+   </property>
+   <property name="toolTip">
+    <string>direct solver on CPU</string>
+   </property>
+  </action>
+  <action name="actionOpenDXFFile">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/dxficon.png</normaloff>:/icons/dxficon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open DXF File</string>
+   </property>
+   <property name="toolTip">
+    <string>Open DXF File</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

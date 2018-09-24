@@ -1,0 +1,37 @@
+# inFINITE mesh file
+MODEL, FRAME22
+NAME, frame_v3
+# Node Constraints [ 0 = free, 1 = restricted]
+# CSTR, index, Cx, Cy, Cr
+CSTR, 0, 0, 0, 0
+CSTR, 1, 1, 1, 1
+CSTR, 2, 1, 1, 0
+# Node Displacements
+#DISP, index, Ux, Uy, Rz
+DISP, 0, 0.0, 0.0, 0.0
+# Materials
+#MAT, index, Name, E, A, I
+MAT, 0, 'user defined', 2.0e8, 5.0e-3, 1.28e-4
+# Node Loads (global system)
+#NLOAD, index, N, Q, M
+NLOAD, 0, 0.0, 0.0, 0.0
+NLOAD, 1, 0.0, -20.0, 0.0
+NLOAD, 2, 30.0, 0.0, 0.0
+# Element distributed loads (local system) [ p(x) = a0 + ... + a_n*x^(n)]
+#ELOAD, index, order, a0, a1, a2, ...
+ELOAD, 0, 0, -10.0
+# Nodes
+#NODE, 0, X, Y, iCSTR, iNLOAD, iDISP
+NODE, 0, 0.0, 0.0, 1, 0, 0
+NODE, 1, 3.6, 0.0, 2, 0, 0
+NODE, 2, 7.2, 0.0, 2, 0, 0
+NODE, 3, 0.0, 3.0, 0, 0, 0
+NODE, 4, 1.8, 3.0, 0, 1, 0
+NODE, 5, 3.6, 3.0, 0, 2, 0
+# Elements
+#ELEM, index, order, iNODE, iNODE, iMAT, iELOAD
+ELEM, 0, 3, 0, 3, 0,  0
+ELEM, 1, 2, 1, 5, 0, -1
+ELEM, 2, 2, 2, 5, 0, -1
+ELEM, 3, 2, 3, 4, 0, -1
+ELEM, 4, 2, 4, 5, 0, -1
